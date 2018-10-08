@@ -16,7 +16,7 @@
                         </div>
                     @endif
                     <h4 style="text-align: center">
-                        You are logged in Mr/Mrs - <br>
+                        Welcome Mr/Mrs - <br>
                         {{ ucwords(Auth::user()->name) }}
                     </h4>
 

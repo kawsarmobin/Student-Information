@@ -13,12 +13,11 @@
             <li class="active">
                 <a href=""> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
             </li>
-            <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
             <li class="menu-item-has-children dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Components</a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Student</a>
                 <ul class="sub-menu children dropdown-menu">
-                    <li><i class="fa fa-puzzle-piece"></i><a href="">Buttons</a></li>
-                    <li><i class="fa fa-id-badge"></i><a href="">Badges</a></li>
+                    <li><i class="fa fa-puzzle-piece"></i><a href="{{ route('student.create') }}">Create Student</a></li>
+                    <li><i class="fa fa-id-badge"></i><a href="{{ route('student.index') }}">Student List</a></li>
                 </ul>
             </li>
             <li class="menu-item-has-children dropdown">

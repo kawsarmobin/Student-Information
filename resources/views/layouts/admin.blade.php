@@ -14,6 +14,7 @@
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 
+    <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/font-awesome.min.css') }}">
@@ -119,11 +120,26 @@
     <script src="{{ asset('admin/js/lib/vector-map/country/jquery.vmap.world.js') }}"></script>
 
 
+    <script src="{{ asset('admin/js/vendor/jquery-2.1.4.min.js') }}"></script>
+
+
     <script type="text/javascript">
         $(document).ready(function() {
           $('#bootstrap-data-table-export').DataTable();
         } );
     </script>
+
+    <script type="text/javascript" src="{{asset('js/toastr.min.js')}}"></script>
+    <script type="text/javascript">
+        @if (Session::has('success'))
+            toastr.success("{{Session::get('success')}}")
+        @endif
+        @if (Session::has('info'))
+            toastr.info("{{Session::get('info')}}")
+        @endif
+    </script>
+
+    @yield('scripts')
 
     <script>
         ( function ( $ ) {
