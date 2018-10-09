@@ -19,6 +19,9 @@ class StudentLoginController extends Controller
 
     public function showLoginForm()
     {
+        if (Auth::guard('student')->check()) {
+            return redirect()->route('student.dash');
+        }
     	return view('auth.stu_login');
     }
 
@@ -30,11 +33,11 @@ class StudentLoginController extends Controller
 			'email'    => 'required|email',
 			'password' => 'required|min:6',
 		]);
-		
+
 
     	// attempt to log student in
     	if (Auth::guard('student')->attempt(['email'=>$request->email,'password'=>$request->password],$request->remember)) {
-            
+
             return redirect()->intended(route('student.dash'));
     	}
 

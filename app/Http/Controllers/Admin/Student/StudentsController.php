@@ -138,6 +138,9 @@ class StudentsController extends Controller
 
         // Guardian
         $guardian = Guardian::where('student_id', $id)->first();
+        if (!$guardian) {
+            $guardian = new Guardian;
+        }
         $guardian->student_id = $student->id;
         $guardian->name = $request->guardian_name;
         $guardian->contact = $request->guardian_contact;

@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h3>Dashboard</h3>
+                    Dashboard
                 </div>
 
                 <div class="card-body">
@@ -15,10 +15,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h4 style="text-align: center">
+                    <p style="text-align: center">
                         Welcome Mr/Mrs - <br>
                         {{ ucwords(Auth::user()->name) }}
-                    </h4>
+                    </p>
 
                 </div>
             </div>
