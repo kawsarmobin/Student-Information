@@ -176,10 +176,13 @@ class StudentsController extends Controller
     public function pdfView($id)
     {
         $student = Student::find($id);
+       
+        // return view('admin.student.pdf_view')
+        //         ->with('student', Student::find($id));
+        
+        
         $pdf = PDF::loadView('admin.student.pdf_view', ['student'=>$student]);
         return $pdf->download('student_profile.pdf');
 
-        // return view('admin.student.pdf_view')
-        //         ->with('student', Student::find($id));
     }
 }

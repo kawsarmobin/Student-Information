@@ -34,4 +34,4 @@ Route::group(['prefix' => 'student'], function () {
     Route::get('/dash', 'Student\StudentDashController@index')->name('student.dash');
 });
 
-// Route::get('pdf-view/{id}', 'Admin\Student\StudentsController@pdfView')->name('pdf.view');
+ Route::get('pdf-view/{id}', 'Admin\Student\StudentsController@pdfView')->name('pdf.view');
