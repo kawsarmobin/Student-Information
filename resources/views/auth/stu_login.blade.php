@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-sm-6 pull-right">
                     <div class="info_button">
-                        <form id="student" class="login100-form validate-form" method="POST" action="">
+                        <form id="student" class="login100-form validate-form" method="POST" action="{{ route('student.login.submit') }}">
                             {{ csrf_field() }}
                             @if ($errors->has('active'))
                                 <span class="help-block">
