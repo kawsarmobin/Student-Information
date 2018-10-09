@@ -47,6 +47,7 @@ class StudentsController extends Controller
         $input = $request->all();
         // student
         $input['avatar'] = $this->imageUpload($request->avatar,'avatar');
+        $input['password'] = bcrypt($request->password);
         $student = Student::create($input);
 
         // Educational Qualification
@@ -127,6 +128,7 @@ class StudentsController extends Controller
             $image->move('uploads/avatar/',$student->avatar);
         }
         $input['avatar'] = $student->getOriginal('avatar');
+        $input['password'] = bcrypt($request->password);
         $student->update($input);
 
         // Educational Qualification
