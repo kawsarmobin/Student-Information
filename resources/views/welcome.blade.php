@@ -71,25 +71,21 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                    <a href="{{ route('login') }}">Login</a>
-                    <a href="{{ route('student.login') }}">Student Login</a>
-                        
+
+                        @if (Auth::guard('student')->check())
+                            <a href="{{ route('student.dash') }}">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+                            <a href="{{ route('student.login') }}">Student Login</a>
+                        @endif
+
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Student Information
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    {{ config('app.name') }}
                 </div>
             </div>
         </div>

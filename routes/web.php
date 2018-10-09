@@ -20,18 +20,20 @@ $this->get('u-login', 'Auth\LoginController@showLoginForm')->name('login');
 $this->post('u-login', 'Auth\LoginController@login');
 $this->post('u-logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::group(['prefix' => 'admin'], function () {
-    Route::resource('student', 'Admin\Student\StudentsController');
-});
-
 // student login
 $this->get('student/login', 'Auth\StudentLoginController@showLoginForm')->name('student.login');
 $this->post('student/login', 'Auth\StudentLoginController@login')->name('student.login.submit');
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
+    Route::resource('student', 'Admin\Student\StudentsController');
+    Route::get('pdf-view/{id}', 'Admin\Student\StudentsController@pdfView')->name('pdf.view');
+});
+
+
 //.........STUDENT
 Route::group(['prefix' => 'student'], function () {
     Route::get('/dash', 'Student\StudentDashController@index')->name('student.dash');
+    Route::get('pdf-download', 'Student\StudentDashController@pdfViewDownload')->name('student.pdf.download');
 });
-
- Route::get('pdf-view/{id}', 'Admin\Student\StudentsController@pdfView')->name('pdf.view');

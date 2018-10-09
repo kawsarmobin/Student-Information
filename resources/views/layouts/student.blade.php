@@ -9,6 +9,19 @@
 
     <link rel="icon" href="{{ asset('images/logo/favicon.png') }}" type="image/x-icon" />
 
+    <link rel="stylesheet" href="{{ asset('admin/css/lib/datatable/dataTables.bootstrap.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/cs-skin-elastic.css') }}">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+    <link rel="stylesheet" href="{{ asset('admin/scss/style.css') }}">
+    <link href="{{ asset('admin/css/lib/vector-map/jqvmap.min.css" rel="stylesheet') }}">
+
 
     <!-- //for-mobile-apps -->
     <link href="{{ asset('student/css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
@@ -20,7 +33,7 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'><!-- //fonts -->
 
-    
+
     <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/toastr.min.css')}}"/>
 
 
@@ -31,13 +44,13 @@
     @yield('styles')
 
 </head>
-<body>
+<body style="background-color: #aeafb3">
     <!-- banner -->
     <div class="header-top hidden-print">
         <div class="container">
             <ul>
-                <li><a href="{{ route('student.dash') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-                
+                <li><a href="{{ route('student.dash') }}">Gono Bishwabidyalay</a></li>
+
                 <li class="pull-right">
 
                     <div class="" data-sound="alert" id="mb-signout">

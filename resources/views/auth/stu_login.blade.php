@@ -32,17 +32,14 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <!-- <div class="">
-                Information Management & Result Processing System
-            </div> -->
-            <h3 class="info_header">Information Management & Result Processing System</h3>
+            <h3 class="info_header">{{ config('app.name') }}</h3>
 
 
 
             <div class="col-sm-12">
                 <div class="col-sm-6 pull-left">
-                    <div class="login100-pic js-tilt" data-tilt>
-                        <img src="{{ asset('login/images/img-01.png') }}" alt="IMG">
+                    <div class="text-center" >
+                        <img src="{{ asset('login/images/logo/gb_logo.png') }}" alt="IMG">
                         <div class="">
                             <h5 style="margin-top:15px;text-align:center;" class="">Computer Science & Engineering</h5>
                         </div>
