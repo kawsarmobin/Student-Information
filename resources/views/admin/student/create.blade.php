@@ -6,7 +6,7 @@
         <form action="{{ route('student.store') }}" method="post" enctype="multipart/form-data" class="form-horizontal">
             @csrf
             <div class="card-header">
-                <strong>Create Student</strong>
+                <strong>Create Student Information</strong>
             </div>
             <div class="card-body card-block">
                 <style>
@@ -197,7 +197,7 @@
                 </button>
                 <button type="reset" class="btn btn-danger btn-sm pull-left">
                     <i class="fa fa-ban"></i> Reset
-                </button>
+                </button> <br>
             </div>
         </form>
     </div>

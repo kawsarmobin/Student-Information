@@ -14,6 +14,8 @@
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 
+    <link rel="stylesheet" href="{{ asset('admin/css/lib/datatable/dataTables.bootstrap.min.css') }}">
+
     <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css') }}">
@@ -120,7 +122,18 @@
     <script src="{{ asset('admin/js/lib/vector-map/country/jquery.vmap.world.js') }}"></script>
 
 
-    <script src="{{ asset('admin/js/vendor/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ asset('admin/js/popper.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/datatables.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/dataTables.bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/buttons.bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/jszip.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/buttons.colVis.min.js') }}"></script>
+    <script src="{{ asset('admin/js/lib/data-table/datatables-init.js') }}"></script>
 
 
     <script type="text/javascript">

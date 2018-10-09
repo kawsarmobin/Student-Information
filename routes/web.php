@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('student', 'Admin\Student\StudentsController');
+
+Route::get('pdf-view/{id}', 'Admin\Student\StudentsController@pdfView')->name('pdf.view');

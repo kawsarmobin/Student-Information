@@ -17,74 +17,76 @@
     <div class="card">
         <div class="card-header">
             <strong>Student Profile</strong>
+
+            <a href="{!! route('pdf.view', $student->id) !!}" class="btn btn-sm btn-primary pull-right">pdf</a>
         </div>
         <div class="card-body">
             <table class="table table-pad">
                 <tr>
                     <td width="300px">
-                        <img width="200px" src="{{ $student->avatar }}" alt="">
+                        <img width="200px" src="{{ $student? $student->avatar : '' }}" alt="">
                     </td>
                     <td>
                         <table class="table-pad">
                             <tr>
                                 <td>Name</td>
                                 <td>:</td>
-                                <td>{{ $student->name }}</td>
+                                <td>{{ $student? $student->name : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>:</td>
-                                <td>{{ $student->email }}</td>
+                                <td>{{ $student? $student->email : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Batch</td>
                                 <td>:</td>
-                                <td>{{ $student->batch }}</td>
+                                <td>{{ $student? $student->batch : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Class Roll</td>
                                 <td>:</td>
-                                <td>{{ $student->class_roll }}</td>
+                                <td>{{ $student? $student->class_roll : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Exam Roll</td>
                                 <td>:</td>
-                                <td>{{ $student->exam_roll }}</td>
+                                <td>{{ $student? $student->exam_roll : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Registration No</td>
                                 <td>:</td>
-                                <td>{{ $student->registration_no }}</td>
+                                <td>{{ $student? $student->registration_no : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Phone No</td>
                                 <td>:</td>
-                                <td>{{ $student->phone_no }}</td>
+                                <td>{{ $student? $student->phone_no : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Gender</td>
                                 <td>:</td>
-                                <td>{{ $student->getGender() }}</td>
+                                <td>{{ $student? $student->getGender() : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Blood Group</td>
                                 <td>:</td>
-                                <td>{{ $student->getBloodGroup() }}</td>
+                                <td>{{ $student? $student->getBloodGroup() : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Religion</td>
                                 <td>:</td>
-                                <td>{{ $student->religion }}</td>
+                                <td>{{ $student? $student->religion : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Date of Birth</td>
                                 <td>:</td>
-                                <td>{{ $student->dob }}</td>
+                                <td>{{ $student? $student->dob : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Nationality</td>
                                 <td>:</td>
-                                <td>{{ $student->nationality }}</td>
+                                <td>{{ $student? $student->nationality : '' }}</td>
                             </tr>
                         </table>
                     </td>
@@ -101,17 +103,17 @@
                 <tr>
                     <td width="250px">Name</td>
                     <td width="70px">:</td>
-                    <td>{{ $student->guardian->name }}</td>
+                    <td>{{ $student->guardian ? $student->guardian->name : '' }}</td>
                 </tr>
                 <tr>
                     <td width="250px">Contact</td>
                     <td width="70px">:</td>
-                    <td>{{ $student->guardian->contact }}</td>
+                    <td>{{ $student->guardian ? $student->guardian->contact : '' }}</td>
                 </tr>
                 <tr>
                     <td width="250px">Relationship</td>
                     <td width="70px">:</td>
-                    <td>{{ $student->guardian->relationship }}</td>
+                    <td>{{ $student->guardian ? $student->guardian->relationship : '' }}</td>
                 </tr>
             </table>
         </div>
@@ -130,23 +132,23 @@
                             </tr>
                             <tr>
                                 <td>Village</td>
-                                <td>{{ $student->address->present_village }}</td>
+                                <td>{{ $student->address ? $student->address->present_village : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Post Office</td>
-                                <td>{{ $student->address->present_post_office }}</td>
+                                <td>{{ $student->address ? $student->address->present_post_office : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Post Code</td>
-                                <td>{{ $student->address->present_post_code }}</td>
+                                <td>{{ $student->address ? $student->address->present_post_code : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Upazila</td>
-                                <td>{{ $student->address->present_upazila }}</td>
+                                <td>{{ $student->address ? $student->address->present_upazila : '' }}</td>
                             </tr>
                             <tr>
                                 <td>District</td>
-                                <td>{{ $student->address->present_district }}</td>
+                                <td>{{ $student->address ? $student->address->present_district : '' }}</td>
                             </tr>
                         </table>
                     </td>
@@ -157,23 +159,23 @@
                             </tr>
                             <tr>
                                 <td>Village</td>
-                                <td>{{ $student->address->permanent_village }}</td>
+                                <td>{{ $student->address ? $student->address->permanent_village : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Post Office</td>
-                                <td>{{ $student->address->permanent_post_office }}</td>
+                                <td>{{ $student->address ? $student->address->permanent_post_office : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Post Code</td>
-                                <td>{{ $student->address->permanent_post_code }}</td>
+                                <td>{{ $student->address ? $student->address->permanent_post_code : '' }}</td>
                             </tr>
                             <tr>
                                 <td>Upazila</td>
-                                <td>{{ $student->address->permanent_upazila }}</td>
+                                <td>{{ $student->address ? $student->address->permanent_upazila : '' }}</td>
                             </tr>
                             <tr>
                                 <td>District</td>
-                                <td>{{ $student->address->permanent_district }}</td>
+                                <td>{{ $student->address ? $student->address->permanent_district : '' }}</td>
                             </tr>
                         </table>
                     </td>
@@ -200,21 +202,21 @@
                     <tbody>
                         <tr>
                             <td>SSC</td>
-                            <td>{{ $student->educationalQualification->ssc_board }}</td>
-                            <td>{{ $student->educationalQualification->ssc_institute }}</td>
-                            <td>{{ $student->educationalQualification->ssc_group }}</td>
-                            <td>{{ $student->educationalQualification->ssc_year }}</td>
-                            <td>{{ $student->educationalQualification->ssc_roll }}</td>
-                            <td>{{ $student->educationalQualification->ssc_result }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->ssc_board : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->ssc_institute : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->ssc_group : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->ssc_year : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->ssc_roll : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->ssc_result : '' }}</td>
                         </tr>
                         <tr>
                             <td>HSC</td>
-                            <td>{{ $student->educationalQualification->hsc_board }}</td>
-                            <td>{{ $student->educationalQualification->hsc_institute }}</td>
-                            <td>{{ $student->educationalQualification->hsc_group }}</td>
-                            <td>{{ $student->educationalQualification->hsc_year }}</td>
-                            <td>{{ $student->educationalQualification->hsc_roll }}</td>
-                            <td>{{ $student->educationalQualification->hsc_result }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->hsc_board : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->hsc_institute : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->hsc_group : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->hsc_year : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->hsc_roll : '' }}</td>
+                            <td>{{ $student->educationalQualification ? $student->educationalQualification->hsc_result : '' }}</td>
                         </tr>
                     </tbody>
                 </table>
