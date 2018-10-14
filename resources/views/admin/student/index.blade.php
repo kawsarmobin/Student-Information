@@ -41,6 +41,7 @@
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                 <div class="dropdown-menu-content">
                                                 <a class="dropdown-item" href="{{ route('student-gpa.create',$student->id) }}">GPA</a>
+                                                <a class="dropdown-item" href="{{ route('thirty-percent-mark.semester',$student->id) }}">30% Mark</a>
                                                 <a class="dropdown-item" href="{{ route('student.show', $student->id) }}">Show</a>
                                                 <a class="dropdown-item" href="{{ route('student.edit', $student->id) }}">Edit</a>
                                                 <a class="dropdown-item" onclick="$('#my_form').submit()" href="#">Delete</a>

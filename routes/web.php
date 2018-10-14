@@ -32,6 +32,11 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
     // student gpa
     Route::get('student-gpa/{student_id}', 'Admin\StudentGPA\StudentGPAController@create')->name('student-gpa.create');
     Route::post('student-gpa/store', 'Admin\StudentGPA\StudentGPAController@store')->name('student-gpa.store');
+    // Thirty Percent Mark
+    Route::resource('thirty-percent-mark', 'Admin\ThirtyPercentMark\ThirtyPercentMarksController');
+    Route::get('thirty-percent-marks/{student_id}/semester', 'Admin\ThirtyPercentMark\ThirtyPercentMarksController@showSemester')->name('thirty-percent-mark.semester');
+    Route::get('thirty-percent-marks/{student_id}/semester/{semester}', 'Admin\ThirtyPercentMark\ThirtyPercentMarksController@thirtyPercentMark')->name('thirty.percent.mark');
+
 
 });
 
