@@ -34,13 +34,23 @@
                                     <td>{{ $student->registration_no }}</td>
                                     <td>{{ $student->phone_no }}</td>
                                     <td>
-                                        <a class="btn btn-sm btn-info" href="{{ route('student.show', $student->id) }}">Show</a>
-                                        <a class="btn btn-sm btn-success" href="{{ route('student.edit', $student->id) }}">Edit</a>
-                                        <a class="btn btn-sm btn-danger" onclick="$('#my_form').submit()" href="#">Delete</a>
+                                        <div class="dropdown float-right">
+                                            <button class="btn dropdown-toggle theme-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                                Action
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <div class="dropdown-menu-content">
+                                                <a class="dropdown-item" href="{{ route('student-gpa.create',$student->id) }}">GPA</a>
+                                                <a class="dropdown-item" href="{{ route('student.show', $student->id) }}">Show</a>
+                                                <a class="dropdown-item" href="{{ route('student.edit', $student->id) }}">Edit</a>
+                                                <a class="dropdown-item" onclick="$('#my_form').submit()" href="#">Delete</a>
 
-                                        <form id="my_form" class="" action="{{ route('student.destroy', $student->id) }}" method="post">
-                                            @csrf @method('delete')
-                                        </form>
+                                                <form id="my_form" class="" action="{{ route('student.destroy', $student->id) }}" method="post">
+                                                    @csrf @method('delete')
+                                                </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach

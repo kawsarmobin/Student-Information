@@ -29,6 +29,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
     Route::resource('student', 'Admin\Student\StudentsController');
     Route::get('pdf-view/{id}', 'Admin\Student\StudentsController@pdfView')->name('pdf.view');
+    // student gpa
+    Route::get('student-gpa/{student_id}', 'Admin\StudentGPA\StudentGPAController@create')->name('student-gpa.create');
+    Route::post('student-gpa/store', 'Admin\StudentGPA\StudentGPAController@store')->name('student-gpa.store');
+
 });
 
 
