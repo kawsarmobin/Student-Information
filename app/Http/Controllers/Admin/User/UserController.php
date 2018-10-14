@@ -45,7 +45,7 @@ class UserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => bcrypt('password')
+            'password' => bcrypt($request->password),
         ]);
 
         Session::flash('success', 'User added successfully.');

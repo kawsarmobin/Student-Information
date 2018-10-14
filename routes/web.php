@@ -24,10 +24,6 @@ $this->post('u-logout', 'Auth\LoginController@logout')->name('logout');
 $this->get('student/login', 'Auth\StudentLoginController@showLoginForm')->name('student.login');
 $this->post('student/login', 'Auth\StudentLoginController@login')->name('student.login.submit');
 
-// Admin
-Route::resource('user', 'Admin\User\UserController');
-Route::get('user/admin/{id}','Admin\User\UserController@admin')->name('user.admin');
-Route::get('user/not-admin/{id}','Admin\User\UserController@not_admin')->name('user.not.admin');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -43,6 +39,10 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
     Route::get('thirty-percent-marks/{student_id}/semester', 'Admin\ThirtyPercentMark\ThirtyPercentMarksController@showSemester')->name('thirty-percent-mark.semester');
     Route::get('thirty-percent-marks/{student_id}/semester/{semester}', 'Admin\ThirtyPercentMark\ThirtyPercentMarksController@thirtyPercentMark')->name('thirty.percent.mark');
 
+    // Admin
+    Route::resource('user', 'Admin\User\UserController');
+    Route::get('user/admin/{id}','Admin\User\UserController@admin')->name('user.admin');
+    Route::get('user/not-admin/{id}','Admin\User\UserController@not_admin')->name('user.not.admin');
 
 });
 
