@@ -53,7 +53,11 @@
 
                 <li class="pull-right">
 
+
                     <div class="" data-sound="alert" id="mb-signout">
+
+                        <a href="{!! route('student.gpa') !!}">GPA</a> |
+                        <a href="{!! route('student.tpm.semester') !!}">30% Mark</a> | 
 
                         <a class="" href="{{ route('logout') }}"
                         onclick="event.preventDefault();

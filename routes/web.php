@@ -51,4 +51,9 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
 Route::group(['prefix' => 'student'], function () {
     Route::get('/dash', 'Student\StudentDashController@index')->name('student.dash');
     Route::get('pdf-download', 'Student\StudentDashController@pdfViewDownload')->name('student.pdf.download');
+    // GPA
+    Route::get('gpa', 'Student\Result\ResultsController@gpa')->name('student.gpa');
+    Route::get('thirty-percent/mark/semester', 'Student\Result\ResultsController@semesterShow')->name('student.tpm.semester');
+    Route::get('thirty-percent/mark/{semester}/semester', 'Student\Result\ResultsController@thirtyPercentMark')->name('student.tpm');
+
 });
