@@ -21,4 +21,20 @@ class EducationalQualification extends Model
         'hsc_roll',
         'hsc_result',
     ];
+    public function getSscBoardAttribute($value)
+    {
+        return ucwords($value);
+    }
+    public function getHscBoardAttribute($value)
+    {
+        return ucwords($value);
+    }
+    public function getSscGroupAttribute($value)
+    {
+        return ucwords($value);
+    }
+    public function getHscGroupAttribute($value)
+    {
+        return ucwords($value);
+    }
 }

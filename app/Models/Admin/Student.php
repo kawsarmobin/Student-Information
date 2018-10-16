@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Student extends Authenticatable
 {
     use Notifiable;
-    
+
     const BLOOD_GROUP = [
         '1' => 'A+',
         '2' => 'A-',
@@ -81,4 +81,5 @@ class Student extends Authenticatable
     {
         return self::BLOOD_GROUP[$this->blood_group];
     }
+    
 }

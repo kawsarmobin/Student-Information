@@ -163,18 +163,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						</div>
 						<div class="login-m_page">
-							<h3 class="sign">Login</h3>
+							<h3 class="sign">Admin Login</h3>
 							<div class="login-form-wthree-agile">
 								<form method="POST" action="{{ route('login') }}">
                                     @csrf
-                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus placeholder="Email">
+
 
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Password">
 
                                     @if ($errors->has('password'))
                                         <span class="invalid-feedback" role="alert">
@@ -210,7 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						</div>
 						<div class="login-m_page">
-							<h3 class="sign">Login</h3>
+							<h3 class="sign">Studen Login</h3>
 							<div class="login-form-wthree-agile">
                                 <form id="student" class="login100-form validate-form" method="POST" action="{{ route('student.login.submit') }}">
                                     {{ csrf_field() }}
@@ -219,9 +220,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <strong>{{ $errors->first('active') }}</strong>
                                         </span>
                                     @endif
-                                    <span class="login100-form-title">
-                                        Student Login
-                                    </span>
+                                    
 
                                     @if ($errors->has('email') || $errors->has('password'))
                                         <div class="width:100%">
