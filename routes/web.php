@@ -55,5 +55,8 @@ Route::group(['prefix' => 'student'], function () {
     Route::get('gpa', 'Student\Result\ResultsController@gpa')->name('student.gpa');
     Route::get('thirty-percent/mark/semester', 'Student\Result\ResultsController@semesterShow')->name('student.tpm.semester');
     Route::get('thirty-percent/mark/{semester}/semester', 'Student\Result\ResultsController@thirtyPercentMark')->name('student.tpm');
+    Route::get('student/pass','Student\StudentDashController@pass')->name('student.pass');
+    Route::post('student/pass-change','Student\StudentDashController@changePass')->name('Pass.change');
+
 
 });

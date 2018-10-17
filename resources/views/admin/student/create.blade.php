@@ -171,7 +171,7 @@
                                     <td>SSC</td>
                                     <td>
                                         <select name="ssc_board" class="form-control" id="board">
-                                            <option value="" selected="">Select One</option>
+                                            <option value="">Select One</option>
                                             <option value="barisal">Barisal</option>
                                             <option value="chittagong">Chittagong</option>
                                             <option value="comilla">Comilla</option>

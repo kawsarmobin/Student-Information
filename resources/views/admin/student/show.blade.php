@@ -120,7 +120,7 @@
     </div>
     <div class="card">
         <div class="card-header">
-            <strong>Guardian</strong>
+            <strong>Address</strong>
         </div>
         <div class="card-body">
             <table class="table table-only-pad">
