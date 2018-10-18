@@ -14,6 +14,9 @@
                 <a href=""> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
             </li>
             @if (Auth::user()->admin)
+                <li class="menu-item-has-children">
+                    <a href="{{ route('user.index') }}"> <i class="menu-icon fa fa-user"></i>Users</a>
+                </li>
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Student</a>
                     <ul class="sub-menu children dropdown-menu">
@@ -21,17 +24,14 @@
                         <li><i class="fa fa-id-badge"></i><a href="{{ route('student.index') }}">Student List</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children">
-                    <a href="{{ route('user.index') }}"> <i class="menu-icon fa fa-user"></i>Users</a>
-                </li>
 
             @endif
-            <li class="menu-item-has-children dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
-                <ul class="sub-menu children dropdown-menu">
-                    <li><i class="fa fa-table"></i><a href="">Basic Table</a></li>
-                </ul>
-            </li>
+            {{-- <li class="menu-item-has-children dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
+            <ul class="sub-menu children dropdown-menu">
+            <li><i class="fa fa-table"></i><a href="">Basic Table</a></li>
         </ul>
-    </div><!-- /.navbar-collapse -->
+    </li> --}}
+</ul>
+</div><!-- /.navbar-collapse -->
 </nav>

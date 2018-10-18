@@ -77,7 +77,7 @@ class StudentsController extends Controller
         $new_name = '';
         if ($image) {
             $new_name = time().'.'.$image->getClientOriginalExtension();
-            $image->move('uploads/'.$path.'/',$new_name);
+            $image->move('public/uploads/'.$path.'/',$new_name);
         }
         return $new_name;
     }
@@ -125,7 +125,7 @@ class StudentsController extends Controller
 
         // student
         if ($image = $request->avatar) {
-            $image->move('uploads/avatar/',$student->avatar);
+            $image->move('public/uploads/avatar/',$student->avatar);
         }
         $input['avatar'] = $student->getOriginal('avatar');
         $input['password'] = bcrypt($request->password);
